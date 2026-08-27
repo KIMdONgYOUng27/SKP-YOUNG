@@ -8,6 +8,14 @@
   .ranking-card { grid-column: auto; }
   .project-title { grid-template-columns: 1fr; }
   .project-meta { grid-template-columns: auto 1fr; width: 320px; }
+  .resource-dialog { grid-template-columns: 230px minmax(0, 1fr); }
+  .resource-modal-sidebar { padding-inline: 17px; }
+  .resource-sidebar-title p { font-size: 23px; }
+  .resource-detail-section { padding-inline: 42px; }
+  .detail-section-heading { grid-template-columns: 1fr 1.5fr; }
+  .detail-section-heading > p { grid-column: 2; }
+  .program-list,.review-list { grid-template-columns: 1fr; }
+  .program-card { min-height: 340px; }
 }
 
 @media (max-width: 900px) {
@@ -32,6 +40,15 @@
   .resource-row:not(.resource-head) > *:last-child { border: 0; }
   .resource-row.is-hidden { display: none !important; }
   .empty-message.is-visible { grid-column: 1 / -1; }
+  .resource-heading > div { display: block; }
+  .resource-heading > div > p { margin-top: 24px; }
+  .tourism-card-body { grid-template-columns: 1fr; gap: 58px; }
+  .tourism-card-primary { min-height: 0; }
+  .tourism-card-primary .resource-details { padding-bottom: 60px; }
+  .resource-card-grid { grid-template-columns: 1fr; }
+  .resource-card-grid .tourism-card { min-height: 680px; }
+  .resource-card-grid .resource-intro { min-height: 0; }
+  .resource-card-grid .resource-details { margin-top: 58px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); row-gap: 55px; }
 }
 
@@ -52,12 +69,12 @@
   .featured-placeholder { min-height: 430px; padding: 25px; }
   .footer-top { display: block; padding-bottom: 65px; }
   .back-top { display: inline-block; margin-top: 50px; }
-  .footer-bottom { min-height: 125px; flex-wrap: wrap; padding-block: 25px; }
-  .footer-bottom .brand { width: 100%; }
-  .footer-bottom p:last-child { margin-left: auto; }
+  .footer-bottom { min-height: 145px; grid-template-columns: 1fr; gap: 12px; padding-block: 25px; }
+  .footer-bottom .brand { grid-column: 1 / -1; width: 100%; }
+  .footer-bottom p:last-child { margin-left: 0; }
 
   .page-hero { min-height: 560px; gap: 42px; padding-block: 74px 60px; }
-  .page-hero h1,.project-title h1 { font-size: clamp(65px, 20vw, 95px); }
+  .page-hero h1,.project-title h1 { font-size: clamp(58px, 18vw, 82px); }
   .page-lead { font-size: 14px; }
   .summary-strip { grid-template-columns: 1fr 1fr; }
   .summary-strip > div { min-height: 145px; padding: 20px; }
@@ -69,6 +86,59 @@
   .resource-table { grid-template-columns: 1fr; }
   .note-banner { padding: 38px 0; }
   .note-banner .shell { gap: 24px; }
+  .resource-card-list { margin-top: 45px; }
+  .tourism-card-primary,.resource-card-grid .tourism-card { min-height: 0; padding: 24px; }
+  .tourism-card-head { padding-bottom: 20px; }
+  .rank-lockup { gap: 9px; }
+  .rank-lockup strong { font-size: 70px; }
+  .resource-code { font-size: 7px; }
+  .tourism-card-body { gap: 42px; padding-top: 45px; }
+  .resource-main h3,.resource-card-grid .resource-main h3 { font-size: clamp(44px, 13vw, 62px); line-height: .98; }
+  .resource-intro,.resource-card-grid .resource-intro { margin-top: 28px; font-size: 14px; line-height: 1.8; }
+  .resource-details dl > div,.resource-card-grid .resource-details dl > div { grid-template-columns: 86px 1fr; gap: 12px; }
+  .resource-details dd { font-size: 12px; }
+  .experience-block { padding-top: 23px; }
+  .tourism-card-primary .resource-details { padding-bottom: 42px; }
+  .card-coordinate { left: 24px; bottom: 23px; }
+  .resource-card-grid { gap: 12px; margin-top: 12px; }
+  .resource-card-grid .resource-main { margin-top: 40px; }
+  .resource-card-grid .resource-details { margin-top: 44px; }
+
+  .resource-modal { padding: 0; }
+  .resource-dialog { width: 100%; height: 100dvh; grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); border: 0; border-radius: 0; }
+  .resource-modal-close { right: 13px; top: 12px; width: 40px; height: 40px; }
+  .resource-modal-close span { left: 10px; top: 19px; }
+  .resource-modal-sidebar { min-height: 136px; display:block; padding:18px 16px 13px; border-right:0; border-bottom:1px solid var(--ink); }
+  .resource-modal-brand { height:32px; }
+  .resource-sidebar-title,.sidebar-foot { display:none; }
+  .resource-modal-sidebar nav { display:flex; gap:5px; margin-top:13px; padding-right:0; overflow-x:auto; scrollbar-width:none; }
+  .resource-modal-sidebar nav button { flex:1 0 auto; grid-template-columns:18px auto; min-height:44px; padding:0 10px; background:rgba(255,255,255,.35); }
+  .resource-modal-sidebar nav button i { display:none; }
+  .resource-modal-sidebar nav button:hover,.resource-modal-sidebar nav button:focus-visible { transform:none; }
+  .resource-modal-scroll { height:auto; }
+  .resource-detail-section { padding:48px 20px 70px; }
+  .resource-detail-topline { margin-right:42px; }
+  .resource-detail-title { display:block; margin-top:36px; }
+  .resource-detail-title h2 { font-size:clamp(54px,16vw,76px); }
+  .detail-status { display:inline-block; margin-top:20px; }
+  .resource-detail-intro { margin-top:28px; font-size:19px; }
+  .resource-photo-grid { grid-template-columns:1.2fr .9fr .9fr; gap:7px; margin-top:38px; overflow-x:auto; padding-bottom:8px; scrollbar-width:none; }
+  .resource-photo-grid figure { min-width:150px; }
+  .resource-photo-grid figure:first-child { min-width:210px; }
+  .resource-photo-grid figcaption span { display:none; }
+  .resource-facts { grid-template-columns:1fr; }
+  .resource-facts > div,.resource-facts > div:not(:first-child) { min-height:0; padding:18px 0; border-right:0; border-bottom:1px solid var(--line); }
+  .resource-facts > div:last-child { border-bottom:0; }
+  .detail-section-heading { grid-template-columns:1fr; gap:24px; }
+  .detail-section-heading > p { grid-column:1; }
+  .detail-section-heading h3 { font-size:36px; line-height:1.02; }
+  .program-list,.review-list { gap:9px; }
+  .program-card { min-height:330px; padding:21px; }
+  .review-summary { grid-template-columns:auto 1fr; gap:16px; }
+  .review-summary > strong { font-size:50px; }
+  .review-summary > small { grid-column:1 / -1; }
+  .review-card { min-height:230px; }
+  .resource-detail-footer { padding:35px 20px 40px; }
 
   .contents-toolbar { display: flex; gap: 22px; }
   .content-grid { grid-template-columns: 1fr; row-gap: 62px; }
