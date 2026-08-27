@@ -1,0 +1,19 @@
+{
+  "name": "sites-project",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview",
+    "lint": "eslint . --ignore-pattern dist"
+  },
+  "devDependencies": {
+    "@openai/sites-vite-plugin": "^0.1.0 || ^0.2.0",
+    "vite": "8.0.13"
+  },
+  "type": "module"
+}
