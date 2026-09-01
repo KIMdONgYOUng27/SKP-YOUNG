@@ -14,6 +14,7 @@ SK플래닛 관광 콘텐츠 제작 과정과 결과물을 정리하는 반응�
 
 - 메인 배너: `index.html`의 `.hero-visual` 영역에 이미지를 넣고 `assets/images/main/`에 파일을 저장합니다.
 - CI 가이드: `index.html`의 `.ci-spec-sheet`에서 선택 가능한 텍스트와 CSS 기반 규정을 수정할 수 있습니다.
+- CI 로고: `assets/images/common/hexagon-r-logo.png`를 교체하면 홈의 모든 로고 사용 예시에 함께 반영됩니다.
 - 조사 자료: `report.html`의 `.tourism-card` 항목을 복제해 순위, 소개, 지역, 체험 정보를 수정합니다.
 - 제작 콘텐츠: `contents.html`의 `[data-content-item]` 카드를 복제하고 실제 이미지나 영상 썸네일을 연결합니다.
 - SNS 수치: `sns.html`의 `data-metric` 값과 `assets/js/main.js`의 `metricSets`를 수정합니다.
