@@ -69,8 +69,14 @@
   .ci-rule-list article { grid-template-columns: 30px 1fr; gap: 10px; padding: 19px 0; }
   .ci-swatches { grid-template-columns: repeat(3, 1fr); gap: 14px 7px; }
   .ci-swatches i { aspect-ratio: 1.35; }
-  .ci-guide-bar { height: 40px; padding-inline: 13px; }
-  .ci-guide figcaption { min-height: 58px; padding-inline: 14px; }
+  .ci-sheet-header,.ci-sheet-section { padding: 25px; }
+  .ci-sheet-header h3 { margin-top: 32px; font-size: clamp(43px, 14vw, 62px); }
+  .ci-primary-grid,.ci-sheet-pair { grid-template-columns: 1fr; }
+  .ci-primary-copy { padding-top: 5px; }
+  .ci-sheet-pair .ci-sheet-section:first-child { border-right: 0; }
+  .ci-sheet-palette { grid-template-columns: repeat(2, 1fr); }
+  .ci-sheet-palette i { aspect-ratio: 1.75; }
+  .ci-background-grid,.ci-dont-grid { grid-template-columns: repeat(2, 1fr); }
   .section-heading h2,.intro-grid h2,.project-overview h2,.result-copy h2 { font-size: clamp(44px, 14vw, 66px); }
   .intro-grid { gap: 35px; }
   .intro-copy > p:first-child { font-size: 19px; }
