@@ -1,0 +1,46 @@
+project:
+  title: "다대포, 부산의 하루가 완성되는 곳"
+  ratio: "4:5"
+  width: 1080
+  height: 1350
+  fps: 30
+  card_duration: "4.0s"
+  transition: "0.35s"
+
+theme:
+  background: "#F6F3EA"
+  text: "#111111"
+  accent: "#4CE65B"
+  dark_accent: "#0B6B3D"
+
+cards:
+  - id: 1
+    role: "hook"
+    headline: "부산의 하루는 다대포에서 완성된다."
+    body: "바다와 생태길, 노을과 음악분수가 한 번의 산책으로 이어지는 곳"
+    visual: "assets/dadaepo-sunset.jpg"
+    motion: "headline-rise, photo-scale"
+  - id: 2
+    role: "context"
+    headline: "바다는 넓고, 시간은 느리다."
+    modules: ["백사장 850m", "폭 65—330m", "해안 300m 지점 수심 약 1.5m"]
+    visual: "assets/dadaepo-beach.jpg"
+    motion: "headline-rise, modules-stagger"
+  - id: 3
+    role: "route"
+    headline: "노을까지 걷는 세 장면."
+    modules: ["고우니생태길", "넓은 백사장", "낙조 포인트"]
+    takeaway: "일몰 1—2시간 전 도착"
+    motion: "steps-reveal"
+  - id: 4
+    role: "feature"
+    headline: "밤이 오면, 물이 춤춘다."
+    modules: ["지름 60m", "노즐 1,052개", "최대 물높이 55m"]
+    visual: "assets/dadaepo-fountain.jpg"
+    motion: "headline-rise, modules-stagger"
+  - id: 5
+    role: "cta"
+    headline: "일몰 2시간 전, 여정을 시작하세요."
+    body: "다대포해수욕장역 4번 출구에서 해변까지 도보 약 10분"
+    cta: "SAVE · SHARE · GO"
+    motion: "headline-rise, cta-pop"

@@ -24,6 +24,7 @@ export default defineConfig({
         contents: resolve(__dirname, 'contents.html'),
         sns: resolve(__dirname, 'sns.html'),
         finalProject: resolve(__dirname, 'final-project.html'),
+        dadaepoCardnews: resolve(__dirname, 'cardnews/dadaepo/index.html'),
       },
     },
   },
