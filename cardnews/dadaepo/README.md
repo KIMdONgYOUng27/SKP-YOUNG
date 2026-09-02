@@ -19,6 +19,16 @@
 - 카드 기획안: `storyboard.yaml`
 - 사진과 로고: `assets/`
 - 최종 프레임 PNG: `previews/`
+- 카드별 MP4: `mp4/dadaepo-card-01.mp4`부터 `dadaepo-card-05.mp4`
+
+## MP4 규격
+
+- 파일 수: 5개(카드별 개별 파일)
+- 해상도: 1080×1350, 4:5
+- 재생 시간: 파일당 4초
+- 프레임 레이트: 30fps
+- 코덱: H.264 High / yuv420p
+- 오디오: 없음
 
 ## 콘텐츠 출처
 
