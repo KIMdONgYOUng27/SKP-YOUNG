@@ -9,7 +9,7 @@ SK플래닛 관광 콘텐츠 제작 과정과 결과물을 정리하는 반응�
 - `contents.html`: 카드뉴스·숏폼·영상 필터 및 상세 모달
 - `sns.html`: SNS 성과 지표와 대시보드
 - `final-project.html`: 팀 프로젝트 소개와 결과물
-- `cardnews/dadaepo/`: 다대포 5장 모션 카드뉴스, 1080×1350 PNG와 카드별 MP4
+- `cardnews/dadaepo/`: 다대포 5장 모션 카드뉴스와 1080×1350 PNG 미리보기
 
 ## 콘텐츠 교체
 
