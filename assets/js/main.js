@@ -28,6 +28,7 @@ const pageFiles = {
   contents: 'contents.html',
   sns: 'sns.html',
   'final-project': 'final-project.html',
+  'trip-b': 'trip-b.html',
 };
 if (pageFiles[currentPage]) {
   document.querySelectorAll(`a[href$="${pageFiles[currentPage]}"]`).forEach((link) => {
