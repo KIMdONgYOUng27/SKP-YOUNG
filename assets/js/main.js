@@ -2,6 +2,10 @@ const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('[data-menu-button]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
 
+// Keep future standalone portfolio worlds on clean directory routes.
+document.querySelectorAll('a[href="./idol.html"]').forEach((link) => link.setAttribute('href', './idol/'));
+document.querySelectorAll('a[href="./brand-image.html"]').forEach((link) => link.setAttribute('href', './brand-image/'));
+
 const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
 syncHeader();
 window.addEventListener('scroll', syncHeader, { passive: true });
@@ -24,11 +28,15 @@ window.addEventListener('keydown', (event) => {
 // Mark the current menu item on every page.
 const currentPage = document.body.dataset.page;
 const pageFiles = {
+  home: 'index.html',
+  projects: 'projects.html',
   report: 'report.html',
   contents: 'contents.html',
+  research: 'research.html',
   sns: 'sns.html',
   'final-project': 'final-project.html',
   'trip-b': 'trip-b.html',
+  about: 'about.html',
 };
 if (pageFiles[currentPage]) {
   document.querySelectorAll(`a[href$="${pageFiles[currentPage]}"]`).forEach((link) => {
@@ -213,6 +221,7 @@ window.addEventListener('keydown', (event) => {
 const contentItems = [...document.querySelectorAll('[data-content-item]')];
 const contentFilters = document.querySelectorAll('[data-content-filter]');
 const contentCount = document.querySelector('[data-content-count]');
+const contentEmpty = document.querySelector('[data-content-empty]');
 contentFilters.forEach((button) => button.addEventListener('click', () => {
   const type = button.dataset.contentFilter;
   let visibleCount = 0;
@@ -223,6 +232,7 @@ contentFilters.forEach((button) => button.addEventListener('click', () => {
     if (visible) visibleCount += 1;
   });
   if (contentCount) contentCount.textContent = String(visibleCount).padStart(2, '0');
+  contentEmpty?.classList.toggle('is-visible', visibleCount === 0);
 }));
 
 const modal = document.querySelector('[data-modal]');
