@@ -2,9 +2,8 @@ const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('[data-menu-button]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
 
-// Keep future standalone portfolio worlds on clean directory routes.
+// Keep the standalone Idol experience on its directory route.
 document.querySelectorAll('a[href="./idol.html"]').forEach((link) => link.setAttribute('href', './idol/'));
-document.querySelectorAll('a[href="./brand-image.html"]').forEach((link) => link.setAttribute('href', './brand-image/'));
 
 const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
 syncHeader();
